@@ -1,0 +1,22 @@
+# Function 1: Count the number of vowels in a given string
+def number_of_vowels(s):
+    vowels = "aeiouAEIOU"  # List of vowels, both lowercase and uppercase
+    count = 0
+    for char in s:
+        if char in vowels:
+            count += 1
+    return count
+
+# Example usage:
+print(number_of_vowels("hello world"))  # Output: 3 ('e', 'o', 'o')
+
+# Function 2: Check if a string is a palindrome (ignoring non-alpha characters)
+def is_valid_pal(s):
+    # Remove all non-alpha characters and convert to lowercase
+    filtered_s = ''.join(char.lower() for char in s if char.isalpha())
+    # Check if the filtered string is equal to its reverse
+    return filtered_s == filtered_s[::-1]
+
+# Example usage:
+print(is_valid_pal("A man, a plan, a canal: Panama"))  # Output: True
+print(is_valid_pal("hello world"))  # Output: False
